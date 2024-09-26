@@ -19,7 +19,7 @@ export default function LaunchingSoonPageMobile() {
               Serene <span className="font-bold">MINDS</span>
             </h2>
             <h1 className="text-xl font-extrabold tracking-tight text-gray-800 mb-2">
-            All-in-One AI-Based Workflow Management Tool
+            All-in-One AI-Based Workflow Management Tool for Health Professionals
             </h1>
             <p className="mx-auto max-w-[280px] text-gray-600 text-sm mb-3">
               Streamline client interactions, assessments, and payments. Launching soon!

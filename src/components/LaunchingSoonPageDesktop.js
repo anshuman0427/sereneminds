@@ -21,7 +21,7 @@
                     Serene <span className="font-bold">MINDS</span>
                   </h2>
                   <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-gray-800">
-                    All-in-One AI-Based Workflow Management Tool
+                  All-in-One AI-Based Workflow Management Tool for Health Professionals
                   </h1>
                   <p className="mx-auto max-w-[550px] text-gray-600 text-sm md:text-md">
                     Streamline your health practice with automated client interactions, assessments, and payments. Launching soon!
