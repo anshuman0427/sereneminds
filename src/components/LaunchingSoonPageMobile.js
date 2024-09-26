@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types';
 import { Button } from './ui/button';
-import { FaUserPlus, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaFileAlt, FaShareSquare, FaPaperPlane } from 'react-icons/fa'; 
+import { FaUserPlus, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaFileAlt, FaShareSquare, FaClinicMedical, FaGlobe, FaPaperPlane } from 'react-icons/fa'; 
 
 export default function LaunchingSoonPageMobile() {
   const handleWhatsAppJoin = () => {
@@ -13,20 +13,20 @@ export default function LaunchingSoonPageMobile() {
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
       <header className="bg-white shadow z-10">
-        <section className="w-full py-6 md:py-8">
+        <section className="w-full py-4">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-lg font-normal text-gray-700 mb-2">
+            <h2 className="text-lg font-normal text-gray-700 mb-1">
               Serene <span className="font-bold">MINDS</span>
             </h2>
-            <h1 className="text-2xl font-extrabold tracking-tight text-gray-800 mb-2">
-              Your All-in-One AI based Client Management Solution
+            <h1 className="text-xl font-extrabold tracking-tight text-gray-800 mb-2">
+            All-in-One AI-Based Workflow Management Tool
             </h1>
-            <p className="mx-auto max-w-[300px] text-gray-600 md:text-lg lg:text-xl mb-4">
-              Streamline your health practice by automating client interactions, assessments, and payments. Launching soon!
+            <p className="mx-auto max-w-[280px] text-gray-600 text-sm mb-3">
+              Streamline client interactions, assessments, and payments. Launching soon!
             </p>
-            {/* Centering the Button */}
+            {/* Join Button */}
             <div className="flex justify-center mt-2 mb-4">
-              <Button onClick={handleWhatsAppJoin} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg flex items-center">
+              <Button onClick={handleWhatsAppJoin} className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg flex items-center">
                 <FaPaperPlane className="mr-1 h-4 w-4" /> Join WhatsApp for Early Access
               </Button>
             </div>
@@ -34,20 +34,60 @@ export default function LaunchingSoonPageMobile() {
         </section>
       </header>
 
-      {/* Main Section for Features */}
-      <main className="flex-1 overflow-y-auto pt-4">
+      {/* Features Section */}
+      <main className="flex-1 overflow-y-auto py-4">
         <section className="w-full py-4 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-xl font-extrabold tracking-tight text-center text-gray-800 mb-4">
+            <h2 className="text-lg font-extrabold tracking-tight text-center text-gray-800 mb-4">
               Key Features
             </h2>
-            <div className="grid grid-cols-1 gap-4">
-              <FeatureCard icon={<FaUserPlus className="h-8 w-8 text-blue-500" />} title="Client Onboarding" description="Effortlessly onboard new clients with our streamlined process." />
-              <FeatureCard icon={<FaClipboardCheck className="h-8 w-8 text-green-500" />} title="Assessments" description="Conduct in-depth assessments to understand client needs." />
-              <FeatureCard icon={<FaCalendarAlt className="h-8 w-8 text-orange-500" />} title="Appointment Booking" description="Manage client appointments with ease and efficiency." />
-              <FeatureCard icon={<FaCreditCard className="h-8 w-8 text-purple-500" />} title="Secure Payments" description="Ensure secure payment processing for peace of mind." />
-              <FeatureCard icon={<FaFileAlt className="h-8 w-8 text-pink-500" />} title="Client Logs" description="Maintain detailed records of client interactions and progress." />
-              <FeatureCard icon={<FaShareSquare className="h-8 w-8 text-yellow-500" />} title="AI-Based Diagnosis" description="Utilize AI to offer tailored diagnosis and suggestions based on assessments." />
+            {/* 2-Column Grid for Features */}
+            <div className="grid grid-cols-2 gap-4">
+              <FeatureCard
+                icon={<FaClinicMedical className="h-6 w-6 text-red-500" />}
+                title="Online Clinic"
+                description="Set up your clinic at no cost."
+              />
+              <FeatureCard
+                icon={<FaUserPlus className="h-6 w-6 text-blue-500" />}
+                title="Onboarding"
+                description="Onboard clients with two clicks."
+              />
+              <FeatureCard
+                icon={<FaClipboardCheck className="h-6 w-6 text-green-500" />}
+                title="Assessments"
+                description="50+ assessments for clients."
+              />
+              <FeatureCard
+                icon={<FaShareSquare className="h-6 w-6 text-yellow-500" />}
+                title="AI Assistant"
+                description="AI-powered diagnosis."
+              />
+              <FeatureCard
+                icon={<FaCalendarAlt className="h-6 w-6 text-orange-500" />}
+                title="Appointments"
+                description="Easy scheduling."
+              />
+              <FeatureCard
+                icon={<FaCreditCard className="h-6 w-6 text-purple-500" />}
+                title="Payments"
+                description="Secure payment processing."
+              />
+              <FeatureCard
+                icon={<FaFileAlt className="h-6 w-6 text-pink-500" />}
+                title="Client Logs"
+                description="Detailed record keeping."
+              />
+              <FeatureCard
+                icon={<FaGlobe className="h-6 w-6 text-green-500" />}
+                title="Landing Page"
+                description="Promote services online."
+              />
+              <FeatureCard
+                icon={<FaShareSquare className="h-6 w-6 text-blue-500" />}
+                title="WhatsApp/Google"
+                description="Integrate seamlessly."
+              />
             </div>
           </div>
         </section>
@@ -58,12 +98,12 @@ export default function LaunchingSoonPageMobile() {
 
 function FeatureCard({ icon, title, description }) {
   return (
-    <div className="flex flex-col items-center text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-      <div className="mb-3 rounded-full bg-gray-100 p-3 text-primary">
+    <div className="flex flex-col items-center text-center bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div className="mb-2 rounded-full bg-gray-100 p-2 text-primary">
         {icon}
       </div>
-      <h3 className="text-lg font-bold text-gray-800">{title}</h3>
-      <p className="text-sm text-gray-600 mt-2">{description}</p>
+      <h3 className="text-md font-bold text-gray-800">{title}</h3>
+      <p className="text-xs text-gray-600 mt-1">{description}</p>
     </div>
   );
 }
