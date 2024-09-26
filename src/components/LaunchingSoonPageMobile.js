@@ -19,10 +19,10 @@ export default function LaunchingSoonPageMobile() {
               Serene <span className="font-bold">MINDS</span>
             </h2>
             <h1 className="text-2xl font-extrabold tracking-tight text-gray-800 mb-2">
-              Your All-in-One Client Management Solution
+              Your All-in-One AI based Client Management Solution
             </h1>
             <p className="mx-auto max-w-[300px] text-gray-600 md:text-lg lg:text-xl mb-4">
-              Streamline your client interactions, assessments, appointments and payments. Launching soon!
+              Streamline your health practice by automating client interactions, assessments, and payments. Launching soon!
             </p>
             {/* Centering the Button */}
             <div className="flex justify-center mt-2 mb-4">
@@ -42,12 +42,12 @@ export default function LaunchingSoonPageMobile() {
               Key Features
             </h2>
             <div className="grid grid-cols-1 gap-4">
-              <FeatureCard icon={<FaUserPlus className="h-8 w-8 text-blue-500" />} title="Client Onboarding" description="Seamlessly onboard new clients with our intuitive process." />
-              <FeatureCard icon={<FaClipboardCheck className="h-8 w-8 text-green-500" />} title="Assessments" description="Conduct comprehensive client assessments with ease." />
-              <FeatureCard icon={<FaCalendarAlt className="h-8 w-8 text-orange-500" />} title="Appointment Booking" description="Effortless scheduling and management of client appointments." />
-              <FeatureCard icon={<FaCreditCard className="h-8 w-8 text-purple-500" />} title="Secure Payments" description="Process payments securely and efficiently." />
-              <FeatureCard icon={<FaFileAlt className="h-8 w-8 text-pink-500" />} title="Client Logs" description="Maintain detailed logs of client interactions and progress." />
-              <FeatureCard icon={<FaShareSquare className="h-8 w-8 text-yellow-500" />} title="Integrations" description="Seamlessly integrate with Google and WhatsApp for enhanced communication." />
+              <FeatureCard icon={<FaUserPlus className="h-8 w-8 text-blue-500" />} title="Client Onboarding" description="Effortlessly onboard new clients with our streamlined process." />
+              <FeatureCard icon={<FaClipboardCheck className="h-8 w-8 text-green-500" />} title="Assessments" description="Conduct in-depth assessments to understand client needs." />
+              <FeatureCard icon={<FaCalendarAlt className="h-8 w-8 text-orange-500" />} title="Appointment Booking" description="Manage client appointments with ease and efficiency." />
+              <FeatureCard icon={<FaCreditCard className="h-8 w-8 text-purple-500" />} title="Secure Payments" description="Ensure secure payment processing for peace of mind." />
+              <FeatureCard icon={<FaFileAlt className="h-8 w-8 text-pink-500" />} title="Client Logs" description="Maintain detailed records of client interactions and progress." />
+              <FeatureCard icon={<FaShareSquare className="h-8 w-8 text-yellow-500" />} title="AI-Based Diagnosis" description="Utilize AI to offer tailored diagnosis and suggestions based on assessments." />
             </div>
           </div>
         </section>

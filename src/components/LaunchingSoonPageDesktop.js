@@ -21,10 +21,10 @@ export default function LaunchingSoonPageDesktop() {
                   Serene <span className="font-bold">MINDS</span>
                 </h2>
                 <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-gray-800">
-                  Your All-in-One Client Management Solution
+                  Your All-in-One AI based Client Management Solution
                 </h1>
                 <p className="mx-auto max-w-[650px] text-gray-600 md:text-lg lg:text-xl">
-                  Streamline your client interactions, assessments, and payments. Launching soon!
+                  Streamline your health practice by automating client interactions, assessments, and payments. Launching soon!
                 </p>
               </div>
               <div className="mt-8">
@@ -70,8 +70,8 @@ export default function LaunchingSoonPageDesktop() {
               />
               <FeatureCard
                 icon={<FaShareSquare className="h-8 w-8 text-yellow-500" />}
-                title="Integrations"
-                description="Seamlessly integrate with Google and WhatsApp for enhanced communication."
+                title="AI-Based Diagnosis"
+                description="Leverage AI for accurate diagnosis and tailored suggestions based on assessments, enhancing your understanding of client needs."
               />
             </div>
           </div>
@@ -98,4 +98,3 @@ FeatureCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
-
