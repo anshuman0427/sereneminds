@@ -22,7 +22,7 @@ export default function LaunchingSoonPageMobile() {
               Your All-in-One Client Management Solution
             </h1>
             <p className="mx-auto max-w-[300px] text-gray-600 md:text-lg lg:text-xl mb-4">
-              Streamline your client interactions, assessments, and payments. Launching soon!
+              Streamline your client interactions, assessments, appointments and payments. Launching soon!
             </p>
             {/* Centering the Button */}
             <div className="flex justify-center mt-2 mb-4">
