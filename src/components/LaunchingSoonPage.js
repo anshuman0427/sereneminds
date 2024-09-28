@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import LaunchingSoonPageDesktop from './LaunchingSoonPageDesktop';
 import LaunchingSoonPageMobile from './LaunchingSoonPageMobile';
+import { Analytics } from '@vercel/analytics/react'; 
 
 export default function LaunchingSoonPage() {
   const [isMobile, setIsMobile] = useState(false);

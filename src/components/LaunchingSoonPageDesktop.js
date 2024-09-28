@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from './ui/button';
 import { FaUserPlus, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaFileAlt, FaShareSquare, FaClinicMedical, FaPaperPlane, FaGlobe } from 'react-icons/fa'; 
-
+// eslint-disable-next-line no-unused-vars
+import { Analytics } from '@vercel/analytics/react';
 // Timer Component
 function CountdownTimer() {
   const calculateTimeLeft = () => {
