@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from './ui/button';
 import { FaUserPlus, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaFileAlt, FaShareSquare, FaClinicMedical, FaGlobe, FaPaperPlane } from 'react-icons/fa';
-import { Analytics } from '@vercel/analytics/react';
+
 
 // Timer Component
 function CountdownTimer() {

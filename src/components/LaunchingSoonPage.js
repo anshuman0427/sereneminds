@@ -9,7 +9,7 @@ export default function LaunchingSoonPage() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 1000); // Consider mobile if width is less than 768px
+    setIsMobile(window.innerWidth < 1000); // Consider mobile if width is less than 1000px
   };
 
   useEffect(() => {
@@ -20,5 +20,11 @@ export default function LaunchingSoonPage() {
     };
   }, []);
 
-  return isMobile ? <LaunchingSoonPageMobile /> : <LaunchingSoonPageDesktop />;
+  return (
+    <>
+      {isMobile ? <LaunchingSoonPageMobile /> : <LaunchingSoonPageDesktop />}
+      {/* Add Analytics component here */}
+      <Analytics />
+    </>
+  );
 }
