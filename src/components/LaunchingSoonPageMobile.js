@@ -1,8 +1,55 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from './ui/button';
-import { FaUserPlus, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaFileAlt, FaShareSquare, FaClinicMedical, FaGlobe, FaPaperPlane } from 'react-icons/fa'; 
+import { FaUserPlus, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaFileAlt, FaShareSquare, FaClinicMedical, FaGlobe, FaPaperPlane } from 'react-icons/fa';
+
+// Timer Component
+function CountdownTimer() {
+  const calculateTimeLeft = () => {
+    const launchDate = new Date('2024-12-25T00:00:00'); // Set your launch date here
+    const now = new Date();
+    const difference = launchDate - now;
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="text-center space-y-1">
+      <h2 className="text-base font-bold text-gray-700">Launching In</h2>
+      <div className="flex justify-center space-x-2">
+        {Object.keys(timeLeft).map((unit, index) => (
+          <div key={index} className="flex flex-col items-center">
+            <span className="text-xl font-extrabold text-gray-800">{timeLeft[unit]}</span>
+            <span className="text-xs text-gray-600 uppercase">{unit}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function LaunchingSoonPageMobile() {
   const handleWhatsAppJoin = () => {
@@ -19,11 +66,15 @@ export default function LaunchingSoonPageMobile() {
               Serene <span className="font-bold">MINDS</span>
             </h2>
             <h1 className="text-xl font-extrabold tracking-tight text-gray-800 mb-2">
-            All-in-One AI-Based Workflow Management Tool for Health Professionals
+              All-in-One AI-Based Workflow Management Tool for Health Professionals
             </h1>
             <p className="mx-auto max-w-[280px] text-gray-600 text-sm mb-3">
               Streamline client interactions, assessments, and payments. Launching soon!
             </p>
+
+            {/* Countdown Timer */}
+            <CountdownTimer />
+
             {/* Join Button */}
             <div className="flex justify-center mt-2 mb-4">
               <Button onClick={handleWhatsAppJoin} className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg flex items-center">
