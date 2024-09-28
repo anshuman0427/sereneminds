@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import LaunchingSoonPageDesktop from './LaunchingSoonPageDesktop';
 import LaunchingSoonPageMobile from './LaunchingSoonPageMobile';
-import { Analytics } from '@vercel/analytics/react'; 
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react" 
 
 export default function LaunchingSoonPage() {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,6 +26,8 @@ export default function LaunchingSoonPage() {
       {isMobile ? <LaunchingSoonPageMobile /> : <LaunchingSoonPageDesktop />}
       {/* Add Analytics component here */}
       <Analytics />
+      {/* Add Analytics component here */}
+      <SpeedInsights/>
     </>
   );
 }
