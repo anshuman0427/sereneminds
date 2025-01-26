@@ -10,7 +10,7 @@ import { FaUserPlus, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaFileAlt, F
 // Countdown Timer Component
 function CountdownTimer() {
   const calculateTimeLeft = () => {
-    const launchDate = new Date('2025-01-31T00:00:00');
+    const launchDate = new Date('2025-02-07T00:00:00');
     const now = new Date();
     const difference = launchDate - now;
 
